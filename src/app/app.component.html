@@ -1,0 +1,33 @@
+  <div class='container'>
+    <div class='ui card'>
+      <h1>Team Generator</h1>
+      <ul class='list'>
+        <li *ngFor="let member of members">{{member}}</li>  <!-- using structural directives to iterate over the members string array, 
+                                                  for each member, the specic member would be stored inside the member variable 
+                                                  and for each iteration, an li tag would be generated    -->
+      </ul>
+      <div class='add-members-container'>
+        <input #addMemberInput type='text' placeholder='Name' (input)='onInput(addMemberInput.value)' [value]='newMemberName'>  <!--#addMemberInput is the input id(angular syntax)
+                                                                                                                                [value] is an attribute directive that changes the value of the input 
+                                                                                                                                back to default after a name has been added.-->
+        <p *ngIf='errorMessage'>{{errorMessage}}</p>
+        <button (click)='addMember()'>Add</button>
+      </div>
+
+      <div class='generate-teams-container'>
+        <input #numberOfTeamsInput type='number' placeholder='No of teams' (input)='onNumberOfTeamsInput(numberOfTeamsInput.value)' [value]='numberOfTeams'>
+        <button (click)='generateTeams()'>Generate</button>
+      </div>
+      <p *ngIf='errorMessage2'>{{errorMessage2}}</p>
+    </div>
+
+    <div *ngIf='teams.length' class='teams-container'>
+      <app-team 
+      *ngFor='let team of teams; let i = index' 
+      [team]='team' 
+      [index]='i'>
+      </app-team>
+    </div>
+
+
+  </div>

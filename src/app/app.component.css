@@ -1,0 +1,77 @@
+.container {
+    padding: 64px;
+    width: 640px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  .list {
+    padding: 16px;
+    width: 100%;
+    height: 160px;
+    border: 1.6px solid grey;
+    overflow: auto;
+  }
+  
+  .add-members-container input {
+    border: none;
+    border-bottom: 1.6px solid rgba(128, 128, 128, 0.418);
+    margin-right: 8px;
+    width: 100%;
+    display: flex;
+  }
+  
+  p {
+    color: hsl(0, 100%, 50%);
+  }
+
+  .add-members-container button {
+    width: 100%;
+    height: 34px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: rgb(182, 26, 148);
+    margin-top: 11px;
+  }
+  
+  .generate-teams-container {
+    margin: 32px 0;
+    display: flex;
+    height: 34px;
+  }
+  
+  .generate-teams-container button {
+    width: 50%;
+    height: 34px;
+    background-color: rgb(8, 134, 134);
+    border: none;
+    color: white;
+  }
+  
+  .generate-teams-container input {
+    width: 50%;
+    padding-left: 5px;
+    border: 1px solid;
+  }
+  
+  .card {
+    padding: 32px;
+    width: 100%;
+  }
+  
+  .error-msg {
+    color: red;
+  }
+
+  li {
+      list-style: none;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+  }
+
