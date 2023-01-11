@@ -1,4 +1,4 @@
-https://teamgeneratorapp.netlify.app/
+https://team-generator-similoluwa-catherine.vercel.app/
 
 # TeamGenerator
 
